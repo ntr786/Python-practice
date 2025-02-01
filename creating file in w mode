@@ -1,0 +1,22 @@
+# open a file in write mode and add some text to it
+newfile = open("Python_basic.txt", "w+")
+
+for i in range(0, 10):
+    newfile.write("Hello, welcome to Python:\n") 
+    #when I didn't use \n at the end it didn't create the lines
+    
+# changing the current file position and read the file 
+newfile.seek(1,0)
+
+# the seek method arrange the lines as a column
+
+# reading the whole text of the file as a string
+print(newfile.read())
+
+print("Current file position: ", newfile.tell())
+
+newfile.close()
+
+print("Is the file closed? ", newfile.closed)
+print("File mode is: ", newfile.mode)
+print("File name: ", newfile.name)
